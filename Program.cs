@@ -27,17 +27,19 @@ do
 
     if (opcionPrincipal == 1)
     {
-
-        Console.WriteLine("Nuevo pedido");
-        Console.WriteLine();
-        Console.WriteLine("Introduzca nombre: ");
-
-        nombreCliente = Console.ReadLine() ?? "";
-        if (nombreCliente.Trim() == "")
+        do
         {
-            Console.WriteLine("El nombre no puede estar vacío.");
-        }
+            Console.WriteLine("Nuevo pedido");
+            Console.WriteLine();
+            Console.WriteLine("Introduzca nombre: ");
 
+            nombreCliente = Console.ReadLine() ?? "";
+            if (nombreCliente.Trim() == "")
+            {
+                Console.WriteLine("El nombre no puede estar vacío.");
+            }
+        }
+        while (nombreCliente.Trim() == "");
         //Menú opciones (1.)
         int opciones1;
         double precioBase;
