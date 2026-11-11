@@ -112,7 +112,7 @@ do
                     {
                         Console.WriteLine("El telefono de contacto no puede estar vacío");
                     }
-                } while (telefono == "");
+                } while (telefono.Trim() == "");
             }
 
         } while (urgente < 0 || urgente > 1);
