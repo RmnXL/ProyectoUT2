@@ -50,7 +50,7 @@ do
         int cantidadAccesorio1 = 0;
         int cantidadAccesorio2 = 0;
         int cantidadAccesorio3 = 0;
-        string telefono;
+        string telefono = "";
 
         do
         {
@@ -103,14 +103,16 @@ do
 
             else if (urgente == 1)
             {
-                extras = +30;
-
-                Console.WriteLine("Añade teléfono de contacto");
-                telefono = Console.ReadLine() ?? "";
-                if (telefono.Trim() == "")
+                extras += 15;
+                do
                 {
-                    Console.WriteLine("El telefono de contacto no puede estar vacío");
-                }
+                    Console.WriteLine("Añade teléfono de contacto");
+                    telefono = Console.ReadLine() ?? "";
+                    if (telefono.Trim() == "")
+                    {
+                        Console.WriteLine("El telefono de contacto no puede estar vacío");
+                    }
+                } while (telefono == "");
             }
 
         } while (urgente < 0 || urgente > 1);
@@ -131,19 +133,19 @@ do
             else if (accesorio == 1)
             {
                 tieneAccesorio1 = true;
-                cantidadAccesorio1 = +1;
+                cantidadAccesorio1 += 1;
                 Console.WriteLine("Producto añadido");
             }
             else if (accesorio == 2)
             {
                 tieneAccesorio2 = true;
-                cantidadAccesorio2 = +1;
+                cantidadAccesorio2 += 1;
                 Console.WriteLine("Producto añadido");
             }
             else if (accesorio == 3)
             {
                 tieneAccesorio3 = true;
-                cantidadAccesorio3 = +1;
+                cantidadAccesorio3 += 1;
                 Console.WriteLine("Producto añadido");
             }
 
@@ -155,12 +157,12 @@ do
         double subtotal = precioBase + extras + (cantidadAccesorio1 * 8) + (cantidadAccesorio2 * 10) + (cantidadAccesorio3 * 12);
         double descuento = 0;
         Console.WriteLine();
-        Console.WriteLine("Subtotal: " + subtotal + "€");
+        Console.WriteLine("Subtotal: " + subtotal.ToString("F2") + "€");
         if (subtotal >= 100)
         {
             descuento = subtotal / 10;
         }
-        Console.WriteLine("Descuento: " + descuento + "€");
+        Console.WriteLine("Descuento: " + descuento.ToString("F2") + "€");
 
 
         //Cobro
@@ -170,7 +172,7 @@ do
         do
         {
             Console.WriteLine();
-            Console.WriteLine("Total a pagar: " + total + "€");
+            Console.WriteLine("Total a pagar: " + total.ToString("F2") + "€");
             importeEntregado = Convert.ToDecimal(Console.ReadLine());
 
             if (importeEntregado < total)
@@ -180,7 +182,7 @@ do
         } while (importeEntregado < total);
 
         decimal cambio = importeEntregado - total;
-        Console.WriteLine("Cambio: " + cambio + "€");
+        Console.WriteLine("Cambio: " + cambio.ToString("F2") + "€");
 
 
         //caja
@@ -220,6 +222,7 @@ do
         if (urgente == 1)
         {
             Console.WriteLine("Pedido urgente: +15€");
+            Console.WriteLine("Numero de telefono: " + telefono);
         }
         if (tieneAccesorio1)
         {
@@ -232,19 +235,20 @@ do
         {
             for (int i = 0; i < cantidadAccesorio2; i++)
             {
-                Console.WriteLine("Protector de pantalla +10€");
+                Console.WriteLine("Copia de seguridad +10€");
             }
         }
         if (tieneAccesorio3)
         {
             for (int i = 0; i < cantidadAccesorio3; i++)
             {
-                Console.WriteLine("Protector de pantalla +12€");
+                Console.WriteLine("Funda +12€");
             }
         }
     }
     else if (opcionPrincipal == 2)
     {
+        //Caja del día
 
         Console.WriteLine();
         Console.WriteLine("=================");
@@ -261,9 +265,9 @@ do
             decimal importeMedio = recaudacion / pedidosRealizados;
 
             Console.WriteLine("Pedidos realizados: " + pedidosRealizados);
-            Console.WriteLine("Recaudacion: " + recaudacion + "€");
-            Console.WriteLine("Importe medio: " + importeMedio + "€");
-            Console.WriteLine("Pedido más caro: " + pedidoMasCaro + "€");
+            Console.WriteLine("Recaudacion: " + recaudacion.ToString("F2") + "€");
+            Console.WriteLine("Importe medio: " + importeMedio.ToString("F2") + "€");
+            Console.WriteLine("Pedido más caro: " + pedidoMasCaro.ToString("F2") + "€");
             Console.WriteLine("Cliente del pedido más caro: " + clientePedidoMasCaro);
         }
 
@@ -273,7 +277,7 @@ do
         Console.WriteLine();
         Console.WriteLine("Cerrando Reparaciones RAW...");
         Console.WriteLine("Pedidos realizados: " + pedidosRealizados);
-        Console.WriteLine("Recaudacion final: " + recaudacion);
+        Console.WriteLine("Recaudacion final: " + recaudacion.ToString("F2"));
         Console.WriteLine("Hasta pronto.");
 
     }
