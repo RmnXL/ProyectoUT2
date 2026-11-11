@@ -1,0 +1,50 @@
+1. Menú principal (se repite hasta salir)
+
+Nueva operación, consultar caja/resumen, salir.
+Las opciones incorrectas permiten reintentar.
+
+2. Datos de la operación
+
+Pedir el nombre del cliente (no vacío ni solo espacios) y los datos necesarios.
+Al empezar otra operación se reinician sus datos, pero no los totales.
+
+3. Producto o servicio principal
+
+Mínimo 3 opciones con precio, con selección válida.
+
+4. Extras
+
+Mínimo 3 extras, seleccionables con un menú repetitivo hasta indicar que has terminado.
+Se puede terminar sin extras.
+Cada extra solo una vez por operación (si se repite: aviso y no se cobra de nuevo).
+Mostrar número de extras e importe provisional.
+
+5. Condición específica del negocio
+
+Mínimo 2 alternativas que cambien el importe o la atención (normal/urgente, local/domicilio...).
+Si una alternativa necesita otro dato (p. ej. dirección), pedirlo y validarlo solo en ese caso.
+
+6. Cálculo y cobro
+
+Subtotal = producto + extras.
+Al menos una regla de descuento con condición clara (debe haber operaciones con y sin descuento).
+Definir cómo afecta el suplemento de la condición específica; el total nunca puede ser negativo.
+Mostrar desglose antes de cobrar.
+Pedir el dinero entregado; si no alcanza, volver a pedirlo. Calcular el cambio y contabilizar la operación una sola vez.
+Importes con 2 decimales.
+
+7. Ticket / justificante
+
+Número de operación, cliente, producto, extras (o indicación de que no hay), modalidad específica y datos adicionales (p. ej. dirección).
+Desglose: precio principal, extras, descuento, suplementos, total, entregado y cambio.
+
+8. Caja / estadísticas
+
+Nº de operaciones cobradas, recaudación (suma de totales finales), importe medio y operación más cara con el nombre del cliente.
+Si no hay operaciones: aviso y evitar dividir entre cero.
+En empate de máximo, se conserva el primero.
+Al salir: despedida y resumen de operaciones e ingresos.
+
+9. Validaciones
+
+Opciones fuera de rango, textos vacíos o solo espacios y pagos insuficientes (con condicionales y bucles). No hace falta controlar letras en entradas numéricas.

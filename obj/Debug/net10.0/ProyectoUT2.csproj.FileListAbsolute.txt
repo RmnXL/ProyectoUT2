@@ -1,0 +1,14 @@
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\bin\Debug\net10.0\ProyectoUT2.exe
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\bin\Debug\net10.0\ProyectoUT2.deps.json
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\bin\Debug\net10.0\ProyectoUT2.runtimeconfig.json
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\bin\Debug\net10.0\ProyectoUT2.dll
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\bin\Debug\net10.0\ProyectoUT2.pdb
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.AssemblyInfoInputs.cache
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.AssemblyInfo.cs
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.csproj.CoreCompileInputs.cache
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.dll
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\refint\ProyectoUT2.dll
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.pdb
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ProyectoUT2.genruntimeconfig.cache
+C:\Users\al3xd\Documents\Vsc\ProyectoUT2\obj\Debug\net10.0\ref\ProyectoUT2.dll
